@@ -26,16 +26,16 @@ In the following,
 
 ##### Input
 
-The first line of the input gives the number of test cases, T. 
+The first line of the input gives the number of test cases, **T**. 
 
-T test cases follow.
+**T** test cases follow.
 
 The first line of each test case contains three integers: the number **N** of cities, 
 the number **M** of roads, and the
  number **K** of Peter's questions.
 
-2M lines -- M pairs of two lines -- follow. In each pair, the first line contains two different integers x and y 
-that describe one bidirectional road between the x-th city and the y-th city. The second line 
+2M lines -- M pairs of two lines -- follow. In each pair, the first line contains two different integers *x* and *y* 
+that describe one bidirectional road between the *x-th city* and *the y-th city*. The second line 
 contains **24** integers `Cost[t] (0 <= t <= 23)` that indicate the time cost, in hours, to use the road when 
 departing at t o'clock on that road. It is guaranteed that `Cost[t] <= to Cost[t+1]+1` `(0 <= t <= 22)` 
 and `Cost[23] <= Cost[0]+1`.
@@ -46,7 +46,7 @@ Then, an additional **K** lines follow. Each contains two integers **D** and **S
 ##### Output
 
 For each test case, output one line containing `"Case #x: "`, where x is the case number (starting from 1),
- followed by K distinct space-separated integers that are the answers to the questions, in order. 
+ followed by **K** distinct space-separated integers that are the answers to the questions, in order. 
  If Peter cannot reach the destination city for a question, no matter which roads he takes, 
  then output -1 for that question.
 
@@ -119,5 +119,5 @@ Case #3: 17 26 13
 ```
 
 ##### EVALUATION
-The Python program will be run on a standard Ubuntu machine and Python 3. 
+The Python program will be run on a standard *Ubuntu machine* and *Python 3*. 
 It will be evaluated on code quality and execution time. 
