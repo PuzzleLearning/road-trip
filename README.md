@@ -119,6 +119,5 @@ Case #3: 17 26 13
 ```
 
 ##### EVALUATION
-The Python program will be run on a standard Ubuntu machine and Python version 2.7. 
+The Python program will be run on a standard Ubuntu machine and Python 3. 
 It will be evaluated on code quality and execution time. 
-

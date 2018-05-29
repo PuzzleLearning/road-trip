@@ -1,10 +1,8 @@
 from collections import namedtuple, defaultdict
 import sys
-# import time
-# import pdb
 
 
-class Graph(object):
+class Graph:
     # Good old python object to represent weighted graphs
     # Distance field can accept any object, we put a timetable here
     def __init__(self):
@@ -33,7 +31,7 @@ def load_test_case(f):
 
     # print test_case
 
-    for x in xrange(1, test_case.number_of_roads + 1):
+    for x in range(1, test_case.number_of_roads + 1):
         roads = f.readline().split()
         # print 'adding roads' + str(roads)
         graph.add_node(roads[0])  # citites (nodes) held as strings
@@ -41,7 +39,7 @@ def load_test_case(f):
         timetable = f.readline().split()
         # print 'adding timetable' + str(timetable)
         graph.add_edge(roads[0], roads[1], [int(num) for num in timetable])
-    for q in xrange(1, test_case.number_of_questions + 1):
+    for q in range(1, test_case.number_of_questions + 1):
         new_questions = f.readline().split()
         # print 'adding questions' + str(new_questions)
         questions.append(new_questions)
@@ -131,10 +129,10 @@ def calculate(graph, questions):
 def load_file(filename):
     with open(filename) as f:
         test_cases = int(f.readline())
-        for i in xrange(1, test_cases + 1):
+        for i in range(1, test_cases + 1):
             graph, questions = load_test_case(f)
             solutions = calculate(graph, questions)
-            print "Case #%i: %s" % (i, ' '.join([str(solution) for solution in solutions]))
+            print('Case #%i: %s' % (i, ' '.join([str(solution) for solution in solutions])))
     return test_cases
 
 
@@ -146,7 +144,7 @@ if __name__ == '__main__':
     try:
         assert len(sys.argv) == 2
     except AssertionError:
-        print "Please provide input filename as solution.py argument"
+        print('Please provide input filename as solution.py argument')
         sys.exit(-1)
 
     # start = time.time()
