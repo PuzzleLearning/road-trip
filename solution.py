@@ -89,7 +89,7 @@ def sp_search(graph, initial, i_point):
         for edge in graph.edges[min_node]:
             try:
                 weight = current_weight + graph.distances[(min_node, edge)][normalize_clock(i_point, current_weight)]
-            except (KeyError, IndexError) as exc:
+            except (KeyError, IndexError):
                 # We shouldn't worry about try/catch. They are cpu efficient
                 # https://docs.python.org/2/faq/design.html#how-fast-are-exceptions
                 # print "No edge between nodes"
@@ -106,10 +106,8 @@ def method_dijkstra(graph, start, end, when_peter_leaves):
 
     visited, paths = sp_search(graph, start, when_peter_leaves)
 
-    try:
-        end_point = paths[end]
-    except KeyError as kerr:
-        # print "Whoops, no path goes to this city. Happens."
+    # When no path goes to this city
+    if end not in paths:
         return -1
 
     return visited[end]
