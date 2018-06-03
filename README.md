@@ -3,11 +3,11 @@ road-trip
 
 #### Description
 
-Write a Python program that will solve the problem described
+Write a Python program that will solve the problem described below.
 
 #### Puzzle
 
-There are N cities in Peter's state (numbered starting from 1, which is Peter's city), and M bidirectional roads 
+There are **N** cities in Peter's state (numbered starting from 1, which is Peter's city), and **M** bidirectional roads 
 directly connect them. (A pair of cities may even be directly connected by more than one road.) Because of changes 
 in traffic patterns, it may take different amounts of time to use a road at different times of day, depending on 
 when the journey starts. (However, the direction traveled on the road does not matter -- traffic is always equally 
@@ -48,7 +48,7 @@ Then, an additional **K** lines follow. Each contains two integers **D** and **S
 For each test case, output one line containing `"Case #x: "`, where x is the case number (starting from 1),
  followed by **K** distinct space-separated integers that are the answers to the questions, in order. 
  If Peter cannot reach the destination city for a question, no matter which roads he takes, 
- then output -1 for that question.
+ then output `-1` for that question.
 
 ##### Limits
 
@@ -60,7 +60,7 @@ x >= 1, y <= N.
 ```
 
 Take careful note of the Limits section. This section will describe two different sets of limits: limits for the 
-Small input and the Large input. 
+"Small input" and the "Large input". 
 
 ##### Small dataset
 
